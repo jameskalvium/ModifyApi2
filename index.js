@@ -18,10 +18,7 @@ app.get('/', (req, res) => {
 });
 
 
-mongoose.connect(DB_URL,{
-  useNewParser:true,
-  useUnifiedTopology:true,
-}).then(()=>console.log("Connected to the database successfully"))
+mongoose.connect(DB_URL).then(()=>console.log("Connected to the database successfully"))
 .catch((err)=>{
   console.log("Error occured")
 })
